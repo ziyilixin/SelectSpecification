@@ -1,0 +1,9 @@
+platform :'ios', '12.0'
+# ignore all warnings from all pods
+inhibit_all_warnings!
+target 'SelectSpecification' do
+pod 'Masonry'
+pod 'MJExtension'
+pod 'UICollectionViewLeftAlignedLayout'
+pod 'MBProgressHUD'
+end
