@@ -358,7 +358,41 @@ static NSString * const headViewId = @"SpecificationHeadView";
 }
 
 - (void)submitSpecification {
-    NSLog(@"提交");
+    
+    NSArray *indexPathsArray = [self.collectionView indexPathsForSelectedItems];
+    NSMutableArray *selectArray = [NSMutableArray array];
+    NSString *specificationStr = [[NSString alloc] init];
+    for (NSIndexPath *indexPath in indexPathsArray) {
+        Specification *specification = self.dataArray[indexPath.section];
+        [selectArray addObject:specification];
+        NSString *str = specification.value[indexPath.row];
+        specificationStr = [specificationStr stringByAppendingString:str];
+    }
+    
+    if (self.dataArray.count > 0) {
+        if (selectArray.count == 0) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+            hud.mode = MBProgressHUDModeText;
+            hud.label.text = [NSString stringWithFormat:@"%@",self.selectLabel.text];
+            [hud hideAnimated:YES afterDelay:2.f];
+            return;
+        }
+    }
+    
+    for (Specification *specification in self.dataArray) {
+        if (![selectArray containsObject:specification]) {
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+            hud.mode = MBProgressHUDModeText;
+            hud.label.text = [NSString stringWithFormat:@"请选择%@",specification.name];
+            [hud hideAnimated:YES afterDelay:2.f];
+            return;
+        }
+    }
+    
+    if (self.block) {
+        self.block(specificationStr, self.countTextField.text);
+    }
+    
 }
 
 - (NSMutableArray *)dataArray {

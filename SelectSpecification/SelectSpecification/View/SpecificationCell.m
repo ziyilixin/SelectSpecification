@@ -11,9 +11,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
-        self.contentView.backgroundColor = [UIColor whiteColor];
-        
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.textColor = RGB_COLOR(@"#666666", 1.0);
         titleLabel.font = [UIFont systemFontOfSize:14.0];
@@ -22,12 +19,12 @@
         titleLabel.layer.borderColor = RGB_COLOR(@"#EAEAEA", 1.0).CGColor;
         titleLabel.layer.borderWidth = 1.0;
         titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:titleLabel];
         self.titleLabel = titleLabel;
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
         }];
-        self.contentView.clipsToBounds = YES;
     }
     return self;
 }
@@ -36,12 +33,12 @@
     [super setSelected:selected];
     
     if (selected) {
-        self.contentView.backgroundColor = RGB_COLOR(@"#FF5403", 1.0);
         self.titleLabel.textColor = [UIColor whiteColor];
+        self.titleLabel.backgroundColor = RGB_COLOR(@"#FF5403", 1.0);
     }
     else {
-        self.contentView.backgroundColor = [UIColor whiteColor];
         self.titleLabel.textColor = RGB_COLOR(@"#666666", 1.0);
+        self.titleLabel.backgroundColor = [UIColor whiteColor];
     }
 }
 

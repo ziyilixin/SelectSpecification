@@ -18,6 +18,8 @@
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
 #define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define kTopHeight 44.0
 #define kNavigationBarHeight (kStatusBarHeight + kTopHeight)
