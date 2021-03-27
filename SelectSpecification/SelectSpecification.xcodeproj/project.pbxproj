@@ -21,6 +21,7 @@
 		043B6CC9260DCD5800216DDC /* Specification.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B6CC8260DCD5800216DDC /* Specification.m */; };
 		043B6CE5260DD3A500216DDC /* SpecificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B6CE4260DD3A500216DDC /* SpecificationCell.m */; };
 		043B6CEB260DD63A00216DDC /* SpecificationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B6CEA260DD63A00216DDC /* SpecificationHeadView.m */; };
+		043B6D0E260ED4FA00216DDC /* 录制.gif in Resources */ = {isa = PBXBuildFile; fileRef = 043B6D0D260ED4FA00216DDC /* 录制.gif */; };
 		459F9AFB352019EB9323B8F3 /* libPods-SelectSpecification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9484B9D952A6AB5C2278BAA4 /* libPods-SelectSpecification.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		043B6CE4260DD3A500216DDC /* SpecificationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecificationCell.m; sourceTree = "<group>"; };
 		043B6CE9260DD63A00216DDC /* SpecificationHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecificationHeadView.h; sourceTree = "<group>"; };
 		043B6CEA260DD63A00216DDC /* SpecificationHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecificationHeadView.m; sourceTree = "<group>"; };
+		043B6D0D260ED4FA00216DDC /* 录制.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "录制.gif"; sourceTree = "<group>"; };
 		14303DFACE38D6E13FAD7ABC /* Pods-SelectSpecification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectSpecification.debug.xcconfig"; path = "Target Support Files/Pods-SelectSpecification/Pods-SelectSpecification.debug.xcconfig"; sourceTree = "<group>"; };
 		321B34D3995CBDF59C3EE5B7 /* Pods-SelectSpecification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectSpecification.release.xcconfig"; path = "Target Support Files/Pods-SelectSpecification/Pods-SelectSpecification.release.xcconfig"; sourceTree = "<group>"; };
 		9484B9D952A6AB5C2278BAA4 /* libPods-SelectSpecification.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelectSpecification.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				043B6C6E260DB4CB00216DDC /* AppDelegate.m */,
 				043B6C70260DB4CB00216DDC /* SceneDelegate.h */,
 				043B6C71260DB4CB00216DDC /* SceneDelegate.m */,
+				043B6D09260ECF3E00216DDC /* Picture */,
 				043B6CFF260DE28C00216DDC /* Controller */,
 				043B6CFE260DE27E00216DDC /* Model */,
 				043B6CFD260DE26400216DDC /* View */,
@@ -200,6 +203,14 @@
 				043B6C74260DB4CB00216DDC /* ViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		043B6D09260ECF3E00216DDC /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				043B6D0D260ED4FA00216DDC /* 录制.gif */,
+			);
+			path = Picture;
 			sourceTree = "<group>";
 		};
 		2B2CF514130403E6BE86274A /* Frameworks */ = {
@@ -313,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B6D0E260ED4FA00216DDC /* 录制.gif in Resources */,
 				043B6C7D260DB4CD00216DDC /* LaunchScreen.storyboard in Resources */,
 				043B6C7A260DB4CD00216DDC /* Assets.xcassets in Resources */,
 				043B6C78260DB4CB00216DDC /* Main.storyboard in Resources */,
